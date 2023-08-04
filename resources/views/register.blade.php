@@ -25,7 +25,7 @@
 <body class="bg-gradient-primary">
 
     <div class="container">
-
+        <a href="/admin" class="my-3 text-white border btn btn-secundary">Home</a>
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->

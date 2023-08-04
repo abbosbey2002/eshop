@@ -51,7 +51,7 @@ Route::resource('contact', ContactController::class);
 
 
 
-Route::get('signup', [UserController::class, 'addUser']);
+Route::get('signup', [UserController::class, 'addUser'])->name('signup');
 
 
 Route::post('/userstore', [UserController::class, 'store'])->name('userstore');
@@ -62,7 +62,7 @@ Route::get('404', [PageController::class, 'error404']);
 
 Route::get('header',  [PageController::class, 'header']);
 
-Route::get('/login',  [UserController::class, 'login']);
+Route::get('login',  [UserController::class, 'login'])->name('login');
 Route::post('/signin',  [UserController::class, 'sign']);
 
 

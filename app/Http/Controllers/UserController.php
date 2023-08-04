@@ -34,10 +34,10 @@ class UserController extends Controller
 
 
         }else{
-            return view('login')->with('error', 'user');
+            return redirect()->route('admin');
         }
 
-        return redirect()->back();
+        return redirect()->route('admin');
 
     }
 
@@ -50,7 +50,7 @@ class UserController extends Controller
             $password=$login[0]->password;
                if($login[0]->login == $req->input('login') && $password == $req->input('password')){
                    session(['username'=>$login[0]->login]);
-                   return view('main');
+                   return redirect()->route('admin');
                }else{
                    return view('login')->with('error', 'password');
                 }

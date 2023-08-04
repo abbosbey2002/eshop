@@ -45,6 +45,11 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>category</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('signup')}}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Add user</span></a>
+    </li>
 
     <!-- Nav Item - Tables -->
     <!-- Divider -->
@@ -56,7 +61,7 @@
     </div>
 
     <!-- Sidebar Message -->
-  
+
 
 </ul>
 <!-- End of Page nav -->

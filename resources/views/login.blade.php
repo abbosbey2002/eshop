@@ -24,8 +24,8 @@
 
 <body class="bg-gradient-primary">
 
-    <div class="container">admin
-
+    <div class="container">
+        <a href="/admin" class="my-3 text-white border btn btn-secundary">Home</a>
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
@@ -68,19 +68,11 @@
                                             Login
                                         </button>
                                         <hr>
-                                        <a href="main" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="main" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
+
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forget-password">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register">Create an Account!</a>
+                                        <a class="small" href="signup">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
