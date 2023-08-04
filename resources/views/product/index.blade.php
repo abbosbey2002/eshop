@@ -44,9 +44,9 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody class="sortable-list">
                 @foreach ($products as $product)
-                <tr >
+                <tr draggable="true" class="list">
                     <th id="id">{{$product->id}}</th>
                     <td style="margin: auto;">{{$product->name}}</td>
                     <td style="margin: auto;">{{substr($product->description, 0, 50)}}</td>
@@ -96,6 +96,63 @@
 
 
 </style>
+
+<script>
+    const items = document.querySelectorAll('.list'); // items
+const box = document.querySelector('.sortable-list'); // box
+
+items.forEach((item) => {
+  item.addEventListener('dragstart', () => {
+    item.classList.add('dragging');
+  });
+
+  item.addEventListener('dragend', () => {
+    item.classList.remove('dragging');
+    saveOrder();
+  });
+});
+
+loadOrder();
+
+function initSortable(e) {
+  const draggingItem = box.querySelector('.dragging');
+  const siblings = [...box.querySelectorAll('.list:not(.dragging)')];
+  let nextSibling = siblings.find((sibling) => {
+    return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+  });
+
+  console.log(nextSibling);
+
+  box.insertBefore(draggingItem, nextSibling);
+}
+
+box.addEventListener('dragover', initSortable);
+
+// Save the order of the items to Local Storage
+function saveOrder() {
+  const itemOrder = [];
+  items.forEach((item) => {
+    itemOrder.push(item.textContent);
+  });
+
+  localStorage.setItem('itemOrder', JSON.stringify(itemOrder));
+}
+
+// Retrieve the saved order of the items from Local Storage
+function loadOrder() {
+  const itemOrder = JSON.parse(localStorage.getItem('itemOrder'));
+  if (itemOrder) {
+    itemOrder.forEach((itemText) => {
+      const item = Array.from(items).find((el) => el.textContent === itemText);
+      if (item) {
+        box.appendChild(item);
+      }
+    });
+  }
+}
+
+// Call the loadOrder function on page load to retrieve the saved order
+</script>
 
 
 </x-layout.header>

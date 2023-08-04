@@ -63,6 +63,7 @@ Route::get('404', [PageController::class, 'error404']);
 Route::get('header',  [PageController::class, 'header']);
 
 Route::get('/login',  [UserController::class, 'login']);
+Route::post('/signin',  [UserController::class, 'sign']);
 
 
 

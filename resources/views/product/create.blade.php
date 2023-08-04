@@ -23,7 +23,7 @@
                 {{-- content --}}
                 <div class="container-fluid">
 
-                    <form action='{{route('u')}}' method="POST" enctype="multipart/form-data">
+                    <form action='{{route('product.store')}}' method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
 
