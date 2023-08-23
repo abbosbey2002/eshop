@@ -29,7 +29,6 @@ a {
 /* Header section styles */
 
 header {
-    background-color: #000000E8;
     border-radius: 0px 0px 68px 68px;
 
 }
@@ -202,7 +201,8 @@ header {
     line-height: 27px;
     background-color: rgba(255, 255, 255);
     box-shadow: 5px 5px 20px rgba(181, 181, 181, 0.2);
-    border-radius: 53px;
+    border-radius: 5px;
+    color: #16ABFF;
 }
 
 .categories button{
@@ -288,7 +288,7 @@ header {
     font-weight: 700;
     font-size: 32px;
     line-height: 36px;
-    color: #474747;
+
 }
 
 .all-products {
@@ -298,6 +298,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-bottom: 160px;
+ 
 }
 
 .product {
@@ -307,7 +308,7 @@ header {
     padding-bottom: 40px;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+    border-radius: 8px;
 }
 
 .product:hover {
@@ -351,7 +352,7 @@ header {
     line-height: 24px;
     background-color: #16ABFF;
     border: 1px solid #16ABFF;
-    border-radius: 100px;
+    border-radius: 10px;
     padding: 10px 15px;
 }
 

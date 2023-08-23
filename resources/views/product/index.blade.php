@@ -34,7 +34,7 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>
-                    <th>id</th>
+                 
                     <th>name</th>
                     <th>description</th>
                     <th>price</th>
@@ -47,7 +47,7 @@
             <tbody class="sortable-list">
                 @foreach ($products as $product)
                 <tr draggable="true" class="list">
-                    <th id="id">{{$product->id}}</th>
+
                     <td style="margin: auto;">{{$product->name}}</td>
                     <td style="margin: auto;">{{substr($product->description, 0, 50)}}</td>
                     <td style="margin: auto;">{{$product->price}}</td>
